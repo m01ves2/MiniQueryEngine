@@ -1,4 +1,6 @@
-﻿namespace Day2_func_actions
+﻿using System.Numerics;
+
+namespace Day2_func_actions
 {
     public static class Program
     {
@@ -6,28 +8,16 @@
         {
             List<int> numbers = new() { 1, 2, 3, 4, 5 };
             Func<int, bool> predicate = IsEven;
-            List<int> result = Where<int>(numbers, predicate);
+            List<int> result = numbers.Where<int>(predicate);
             Print(result);
 
             Console.WriteLine();
 
             List<string> strings = new() { "She", "sells", "seashells", "by", "the", "seashore" };
             Func<string, bool> strPredicate = LongString;
-            List<string> stringsResult = Where<string>(strings, strPredicate);
+            List<string> stringsResult = strings.Where<string>(strPredicate);
             Print(stringsResult);
 
-        }
-
-
-        private static List<T> Where<T>(List<T> numbers, Func<T, bool> predicate)
-        {
-            List<T> result = new();
-            foreach (T num in numbers) {
-                if (predicate(num))
-                    result.Add(num);
-            }
-
-            return result;
         }
 
         private static bool IsEven(int x) {
