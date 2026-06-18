@@ -1,4 +1,4 @@
-﻿namespace MiniQueryEngine
+﻿namespace Day1_delegates
 {
     public class Program
     {

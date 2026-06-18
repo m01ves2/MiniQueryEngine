@@ -1,4 +1,4 @@
-﻿namespace MiniQueryEngine
+﻿namespace Day1_delegates
 {
     public delegate int Operation(int a, int b);
 
