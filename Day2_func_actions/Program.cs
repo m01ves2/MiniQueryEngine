@@ -5,46 +5,29 @@
         public static void Main(string[] args)
         {
             List<int> numbers = new() { 1, 2, 3, 4, 5 };
-            Action<int> action = SquareAction;
-            Func<int, int> func = SquareFunc;
-            Method(numbers, action);
+            Func<int, bool> predicate = IsEven;
 
-            Console.WriteLine();
+            List<int> result = Where(numbers, predicate);
 
-            var resultFunc = Method2(numbers, func);
-            resultFunc.ForEach(x => Console.Write(x + " "));
-            
-        }
-
-        private static void Method(List<int> num, Action<int> action)
-        {
-            for (int i = 0; i < num.Count; i++) {
-                action(num[i]);
+            for (int i = 0; i < result.Count; i++) {
+                Console.WriteLine(result[i]);
             }
         }
 
-        public static void SquareAction(int i)
-        {
-            Print(i * i);
-        }
 
-        public static void Print(int num)
-        {
-            Console.Write(num + " ");
-        }
-
-        private static List<int> Method2(List<int> num, Func<int, int> func)
+        private static List<int> Where(List<int> numbers, Func<int, bool> predicate)
         {
             List<int> result = new();
-            for (int i = 0; i < num.Count; i++) {
-                result.Add(func(num[i]));
+            foreach (int num in numbers) {
+                if (predicate(num))
+                    result.Add(num);
             }
+
             return result;
         }
 
-        public static int SquareFunc(int i)
-        {
-            return i * i;
+        private static bool IsEven(int x) {
+            return x % 2 == 0;
         }
     }
 }
