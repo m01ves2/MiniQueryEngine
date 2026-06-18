@@ -6,19 +6,23 @@
         {
             List<int> numbers = new() { 1, 2, 3, 4, 5 };
             Func<int, bool> predicate = IsEven;
+            List<int> result = Where<int>(numbers, predicate);
+            Print(result);
 
-            List<int> result = Where(numbers, predicate);
+            Console.WriteLine();
 
-            for (int i = 0; i < result.Count; i++) {
-                Console.WriteLine(result[i]);
-            }
+            List<string> strings = new() { "She", "sells", "seashells", "by", "the", "seashore" };
+            Func<string, bool> strPredicate = LongString;
+            List<string> stringsResult = Where<string>(strings, strPredicate);
+            Print(stringsResult);
+
         }
 
 
-        private static List<int> Where(List<int> numbers, Func<int, bool> predicate)
+        private static List<T> Where<T>(List<T> numbers, Func<T, bool> predicate)
         {
-            List<int> result = new();
-            foreach (int num in numbers) {
+            List<T> result = new();
+            foreach (T num in numbers) {
                 if (predicate(num))
                     result.Add(num);
             }
@@ -28,6 +32,18 @@
 
         private static bool IsEven(int x) {
             return x % 2 == 0;
+        }
+
+        private static bool LongString(string str)
+        {
+            return str.Length > 3;
+        }
+
+        private static void Print<T>(List<T> values)
+        {
+            for (int i = 0; i < values.Count; i++) {
+                Console.Write(values[i] + " ");
+            }
         }
     }
 }
