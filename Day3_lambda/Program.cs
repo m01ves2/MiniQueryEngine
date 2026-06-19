@@ -2,18 +2,21 @@
 {
     public static class Program
     {
-        public static void Main(string[] args)
+        static void Main()
         {
-            Func<int, bool> check = IsGreaterThan10;
-            Func<int, bool> check2 = x => x > 10;
-            bool result = check2(15);
+            List<int> numbers = [1, 5, 12, 20, 7, 15];
 
-            Console.WriteLine(result);
-        }
+            var result = numbers.Where(x =>
+            {
+                Console.WriteLine($"Check {x}");
+                return x > 10;
+            });
 
-        static bool IsGreaterThan10(int number)
-        {
-            return number > 10;
+            Console.WriteLine("Where finished");
+
+            foreach (var item in result) {
+                Console.WriteLine($"Result {item}");
+            }
         }
     }
 }
