@@ -5,7 +5,8 @@
         public static void Main(string[] args)
         {
             Func<int, bool> check = IsGreaterThan10;
-            bool result = check(15);
+            Func<int, bool> check2 = x => x > 10;
+            bool result = check2(15);
 
             Console.WriteLine(result);
         }
