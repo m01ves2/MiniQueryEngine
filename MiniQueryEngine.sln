@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2_func_actions", "Day2_f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3_lambda", "Day3_lambda\Day3_lambda.csproj", "{C8D72B78-5345-409A-8BD8-870BA4F2157A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4_myLINQ", "Day4_myLINQ\Day4_myLINQ.csproj", "{7DE55738-2689-4C0A-9B66-E107FC5EB782}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C8D72B78-5345-409A-8BD8-870BA4F2157A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D72B78-5345-409A-8BD8-870BA4F2157A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D72B78-5345-409A-8BD8-870BA4F2157A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE55738-2689-4C0A-9B66-E107FC5EB782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE55738-2689-4C0A-9B66-E107FC5EB782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE55738-2689-4C0A-9B66-E107FC5EB782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE55738-2689-4C0A-9B66-E107FC5EB782}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
