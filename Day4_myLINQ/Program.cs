@@ -5,12 +5,14 @@
         public static void Main(string[] args)
         {
             List<int> list = new List<int>() {1, 10, 15, 12, 3, 2 };
-            var result = list.MyWhere(x => x >= 10 );
+            var result = list.MyWhere(x => x >= 10 ).MyToList();
 
-            Console.WriteLine("result: " + result.First() );
+            Console.WriteLine("first element: " + result.MyFirst());
 
-            foreach (var item in result) {
-                Console.WriteLine(item);
+            Console.WriteLine("All elements: ");
+            var resultStrings = result.MySelect(x => x.ToString());
+            foreach (var resultString in resultStrings) {
+                Console.WriteLine(resultString);
             }
         }
     }
