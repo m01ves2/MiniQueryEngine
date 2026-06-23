@@ -8,28 +8,33 @@ namespace Day5_expressions
         {
             Expression<Func<Book, bool>> expr = b => b.Pages > 100;
 
-            Console.WriteLine("Expression: ");
-            Console.WriteLine(expr);
-            Console.WriteLine(expr.Body);
-            Console.WriteLine(expr.Body.NodeType);
-            Console.WriteLine(expr.Body.GetType());
+            var lambda = expr;
+            var lambdaExpr = (LambdaExpression)lambda ?? throw new ArgumentNullException(nameof(lambda));
+            Print(lambdaExpr);
 
-            Console.WriteLine("Expression body: ");
-            var body = (BinaryExpression)expr.Body;
-            var left = (MemberExpression)body.Left;
-            var right = (ConstantExpression)body.Right;
+            var lambdaParam = lambdaExpr.Parameters.Single();
+            var lambdaParamExpr = (ParameterExpression)lambdaParam ?? throw new ArgumentNullException(nameof(lambdaParam));
+            Print(lambdaParamExpr);
 
-            Console.WriteLine("Expression body left: ");
-            Console.WriteLine(body.Left);
-            Console.WriteLine("Expression body left type: ");
-            Console.WriteLine(body.Left.GetType().Name);
+            var body = lambdaExpr.Body;
+            var bodyExpr = (BinaryExpression)body ?? throw new ArgumentNullException(nameof(body));
+            Print(bodyExpr);
 
-            Console.WriteLine("Expression body right: ");
-            Console.WriteLine(body.Right);
-            Console.WriteLine("Expression body right type: ");
-            Console.WriteLine(body.Right.GetType().Name);
+            var leftBody = bodyExpr.Left;
+            var leftBodyExpr = (MemberExpression)leftBody ?? throw new ArgumentNullException(nameof(leftBody));
+            Print(leftBodyExpr);
 
-            Console.WriteLine(left.Member.GetType().Name); //RuntimePropertyInfo
+            var rightBody = bodyExpr.Right;
+            var rightBodyExpr = (ConstantExpression)rightBody ?? throw new ArgumentNullException(nameof(rightBody));
+            Print(rightBodyExpr);
+        }
+
+        private static void Print(Expression? expr)
+        {
+            Console.WriteLine($"NodeType: {expr?.NodeType}");
+            Console.WriteLine($"Type    : {expr?.Type}");
+            Console.WriteLine($"CLR Type: {expr?.GetType()}");
+            Console.WriteLine("============================");
         }
     }
 }
