@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4_myLINQ", "Day4_myLINQ\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day5_expressions", "Day5_expressions\Day5_expressions.csproj", "{32D66EEB-79DC-426E-9739-136CF382239B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6_expression_tree_visitor", "Day6_expression_tree_visitor\Day6_expression_tree_visitor.csproj", "{981F1F00-F4DA-45EC-9F70-7E21091C00C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{32D66EEB-79DC-426E-9739-136CF382239B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32D66EEB-79DC-426E-9739-136CF382239B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32D66EEB-79DC-426E-9739-136CF382239B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
