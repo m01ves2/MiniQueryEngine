@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day5_expressions", "Day5_ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6_expression_tree_visitor", "Day6_expression_tree_visitor\Day6_expression_tree_visitor.csproj", "{981F1F00-F4DA-45EC-9F70-7E21091C00C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7_translator_v1", "Day7_translator_v1\Day7_translator_v1.csproj", "{48924A8C-2502-412F-9B46-3BA91F473908}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{981F1F00-F4DA-45EC-9F70-7E21091C00C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48924A8C-2502-412F-9B46-3BA91F473908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48924A8C-2502-412F-9B46-3BA91F473908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48924A8C-2502-412F-9B46-3BA91F473908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48924A8C-2502-412F-9B46-3BA91F473908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
