@@ -12,8 +12,11 @@ namespace Day6_expression_tree_visitor
 
         private static void Print(Expression expr)
         {
-            var printVisitor = new PrintVisitor();
-            printVisitor.Visit(expr);
+            //var printVisitor = new PrintVisitor();
+            //printVisitor.Visit(expr);
+
+            MyPrintVisitor visitor = new MyPrintVisitor();
+            visitor.Visit(expr);
         }
 
         //private static void Print(Expression expr)
