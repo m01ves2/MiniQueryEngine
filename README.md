@@ -51,3 +51,10 @@ Day 6:
 - migrated to ExpressionVisitor
 - implemented PrintVisitor for formatting expressions
 Result: foundational understanding of AST traversal and Visitor pattern
+
+Day 7:
+- Implemented ExpressionTranslator using ExpressionVisitor.
+- Added support for binary, unary, conditional, method call, member and constant expressions.
+- Improved literal formatting for strings, chars and null.
+- Learned how Expression Trees can be translated into another representation.
+ Result: Implemented a basic Expression-to-string translator using ExpressionVisitor.
