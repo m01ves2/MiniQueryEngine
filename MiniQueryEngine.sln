@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6_expression_tree_visito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7_translator_v1", "Day7_translator_v1\Day7_translator_v1.csproj", "{48924A8C-2502-412F-9B46-3BA91F473908}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8_API", "Day8_API\Day8_API.csproj", "{F7A8650E-D2CB-4A10-915B-F9D8B4692649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{48924A8C-2502-412F-9B46-3BA91F473908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48924A8C-2502-412F-9B46-3BA91F473908}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48924A8C-2502-412F-9B46-3BA91F473908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A8650E-D2CB-4A10-915B-F9D8B4692649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A8650E-D2CB-4A10-915B-F9D8B4692649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A8650E-D2CB-4A10-915B-F9D8B4692649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A8650E-D2CB-4A10-915B-F9D8B4692649}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

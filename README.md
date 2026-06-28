@@ -52,9 +52,18 @@ Day 6:
 - implemented PrintVisitor for formatting expressions
 Result: foundational understanding of AST traversal and Visitor pattern
 
+
 Day 7:
 - Implemented ExpressionTranslator using ExpressionVisitor.
 - Added support for binary, unary, conditional, method call, member and constant expressions.
 - Improved literal formatting for strings, chars and null.
 - Learned how Expression Trees can be translated into another representation.
  Result: Implemented a basic Expression-to-string translator using ExpressionVisitor.
+
+
+ Day 8 - Query API
+- Designed QueryEngine and Query<T>
+- Implemented fluent Where() API
+- Introduced Expression<Func<T, bool>> storage for deferred filtering
+- Built foundation for in-memory query execution layer
+Result: Basic query builder infrastructure for future expression-based execution.
