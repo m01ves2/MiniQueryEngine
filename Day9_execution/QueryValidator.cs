@@ -6,10 +6,7 @@ namespace Day9_execution
     {
         public void Validate(IReadOnlyList<QueryOperation> ops)
         {
-            int terminalIndex = ops.Select((op, i) => (op, i)).FirstOrDefault(x => IsTerminal(x.op)).i;
-
-            if (terminalIndex != 0 && terminalIndex != ops.Count - 1)
-                throw new Exception("Terminal operation must be last");
+            throw new NotImplementedException("Validation rules will be defined in Day-10 merge tree stage");
         }
 
         private bool IsTerminal(QueryOperation op)

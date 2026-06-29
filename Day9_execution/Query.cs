@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using Day9_execution.Operators;
 using Day9_execution.QueryOperations;
 
 namespace Day9_execution
@@ -14,8 +15,10 @@ namespace Day9_execution
 
         public IEnumerable<T> Execute(IEnumerable<T> source)
         {
-            return engine.Execute(source, this);
+            var executor = new PipelineExecutor<T>();
+            return executor.Execute(source, operations);
         }
+
 
         public Query<T> Where(Expression<Func<T, bool>> expr)
         {
@@ -32,12 +35,6 @@ namespace Day9_execution
         public Query<T> Take(int count)
         {
             operations.Add(new TakeOperation(count));
-            return this;
-        }
-
-        public Query<T> Count()
-        {
-            operations.Add(new CountOperation());
             return this;
         }
 

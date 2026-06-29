@@ -18,7 +18,7 @@
         {
             var ops = query.Build();
 
-            validator.Validate(ops);
+            //validator.Validate(ops);
 
             IQueryExecutor<T> executor = new PipelineExecutor<T>();
 

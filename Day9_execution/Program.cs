@@ -1,4 +1,4 @@
-﻿using System.Linq.Expressions;
+﻿using Day9_execution.Operators;
 
 namespace Day9_execution
 {
@@ -17,7 +17,9 @@ namespace Day9_execution
 
             var engine = new QueryEngine();
 
-            var result = engine.Query<Book>().Where(b => b.Pages > 100).Skip(1).Take(3).Execute(books);
+            var query = engine.Query<Book>().Where(b => b.Pages > 100).Skip(1).Take(3).Execute(books);
+            
+            var result = engine.Query<Book>().Where(b => b.Pages > 100).Skip(1).Take(3).Execute(books).CountResult();
         }
     }
 }

@@ -10,13 +10,6 @@ namespace Day9_execution.Operators
         }
         public IEnumerable<T> Execute(IEnumerable<T> source)
         {
-            //foreach (var item in source) {
-            //    if (--count < 0)
-            //        yield break;
-
-            //    yield return item;
-            //}
-
             int remaining = count;
 
             foreach (var item in source) {

@@ -2,8 +2,10 @@ Day 1:
 - Implemented a simple console calculator using delegates for operation dispatch.
 - Refactored architecture into Parser and OperationRegistry for separation of concerns.
 - Explored delegates as behavior containers and introduced multicast delegate concept.
-Result: foundational understanding of delegates as runtime-bound behavior in C#.
-Insight: C# delegates behave as objects encapsulating invocation logic, not as raw function pointers.
+Result: 
+- foundational understanding of delegates as runtime-bound behavior in C#.
+Insight: 
+- C# delegates behave as objects encapsulating invocation logic, not as raw function pointers.
 
 
 Day 2:
@@ -50,7 +52,8 @@ Day 6:
 - replaced switch-based dispatch with custom visitor
 - migrated to ExpressionVisitor
 - implemented PrintVisitor for formatting expressions
-Result: foundational understanding of AST traversal and Visitor pattern
+Result: 
+- foundational understanding of AST traversal and Visitor pattern
 
 
 Day 7:
@@ -58,12 +61,23 @@ Day 7:
 - Added support for binary, unary, conditional, method call, member and constant expressions.
 - Improved literal formatting for strings, chars and null.
 - Learned how Expression Trees can be translated into another representation.
- Result: Implemented a basic Expression-to-string translator using ExpressionVisitor.
+ Result: 
+ - Implemented a basic Expression-to-string translator using ExpressionVisitor.
 
 
- Day 8 - Query API
+ Day 8: Query API
 - Designed QueryEngine and Query<T>
 - Implemented fluent Where() API
 - Introduced Expression<Func<T, bool>> storage for deferred filtering
 - Built foundation for in-memory query execution layer
-Result: Basic query builder infrastructure for future expression-based execution.
+Result: 
+- Basic query builder infrastructure for future expression-based execution.
+
+
+Day 9: Execution
+- Implemented a pipeline execution model where query operations are collected as a sequence and executed over an IEnumerable<T> source. 
+- Introduced core operators (Where, Skip, Take) with support for expression compilation into delegates.
+- Explored deferred execution behavior and separation between query definition and execution. 
+- Prepared foundation for future query optimization via expression tree merging.
+Result: 
+- Working pipeline-based query engine with basic query operators and execution model.
