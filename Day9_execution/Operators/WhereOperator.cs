@@ -1,6 +1,6 @@
-﻿namespace Day9_execution.Operations
+﻿namespace Day9_execution.Operators
 {
-    public class WhereOperator<T> : IOperation<T>
+    public class WhereOperator<T> : IOperator<T>
     {
         private readonly Func<T, bool> predicate;
 

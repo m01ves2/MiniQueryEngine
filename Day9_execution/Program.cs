@@ -1,4 +1,6 @@
-﻿namespace Day9_execution
+﻿using System.Linq.Expressions;
+
+namespace Day9_execution
 {
     public static class Program
     {
@@ -13,14 +15,9 @@
                 new Book(){Title = "title500", Pages = 500},
             };
 
-            QueryEngine engine = new QueryEngine();
-            var filteredBooks = engine.Query<Book>().Where(b => b.Pages > 200).Execute(books);
+            var engine = new QueryEngine();
 
-            Console.WriteLine("Before foreach");
-
-            foreach (var b in filteredBooks) {
-                Console.WriteLine(b.Title);
-            }
+            var result = engine.Query<Book>().Where(b => b.Pages > 100).Skip(1).Take(3).Execute(books);
         }
     }
 }
