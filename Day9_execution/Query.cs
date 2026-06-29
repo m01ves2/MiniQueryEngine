@@ -19,21 +19,20 @@ namespace Day9_execution
                 funcs.Add(expression.Compile());
             }
 
+            foreach (var func in funcs) {
+                collection = WhereOperator(collection, func);
+            }
+
+            return collection;
+        }
+
+        private static IEnumerable<T> WhereOperator(IEnumerable<T> collection, Func<T, bool> predicate)
+        {
             foreach (var item in collection) {
-                bool isAllTrue = true;
-                foreach (var func in funcs) {
-                    if (!func(item)) {
-                        isAllTrue = false;
-                        break;
-                    }
-
-                }
-
-                if (isAllTrue) {
+                if (predicate(item)) {
                     yield return item;
                 }
             }
         }
-
     }
 }
