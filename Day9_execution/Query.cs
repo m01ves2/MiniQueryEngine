@@ -1,38 +1,25 @@
 ﻿using System.Linq.Expressions;
+using Day9_execution.Operations;
 
 namespace Day9_execution
 {
     public class Query<T>
     {
-        private readonly List<Expression<Func<T, bool>>> expressions = new List<Expression<Func<T, bool>>>();
+        private readonly List<IOperation<T>> operations = new List<IOperation<T>>();
 
         public Query<T> Where(Expression<Func<T, bool>> expr)
         {
-            expressions.Add(expr);
+            operations.Add(new WhereOperator<T>(expr.Compile()));
             return this;
         }
 
-        public IEnumerable<T> Execute(IEnumerable<T> collection)
+        public IEnumerable<T> Execute(IEnumerable<T> source)
         {
-            List<Func<T, bool>> funcs = new List<Func<T, bool>>();
-            foreach (var expression in expressions) {
-                funcs.Add(expression.Compile());
+            foreach (var op in operations) {
+                source = op.Execute(source);
             }
 
-            foreach (var func in funcs) {
-                collection = WhereOperator(collection, func);
-            }
-
-            return collection;
-        }
-
-        private static IEnumerable<T> WhereOperator(IEnumerable<T> collection, Func<T, bool> predicate)
-        {
-            foreach (var item in collection) {
-                if (predicate(item)) {
-                    yield return item;
-                }
-            }
+            return source;
         }
     }
 }
