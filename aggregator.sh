@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("MiniQueryEngine")
+dirs=("Day9_execution")
 output="result.txt"
 
 # очищаем файл
