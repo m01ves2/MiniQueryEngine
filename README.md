@@ -98,3 +98,9 @@ Day 11: SELECT & Execution Pipeline
 - Improved understanding of execution flow and expression-based transformations.
 Result: 
 - Working query engine with SELECT projection.
+
+Day 12 - Manual AST Building
+- Explored and manually constructed Expression Trees in C#, including binary operations, logical operators, method calls, and closure behavior. 
+- Gained understanding of how LINQ expression trees are structured and evaluated at runtime.
+Result: 
+- practical understanding of Expression Tree internals and ability to manually build and execute lambda expressions.

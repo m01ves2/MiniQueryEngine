@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayX_query_merge_optimizer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayXI_select", "DayXI_select\DayXI_select.csproj", "{D80403AD-128C-4EBA-B7BC-A753C91E4221}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayXII_manual_AST_building", "DayXII_manual_AST_building\DayXII_manual_AST_building.csproj", "{097908D5-8CDB-4F27-A400-15192DED5931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{D80403AD-128C-4EBA-B7BC-A753C91E4221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80403AD-128C-4EBA-B7BC-A753C91E4221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80403AD-128C-4EBA-B7BC-A753C91E4221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{097908D5-8CDB-4F27-A400-15192DED5931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{097908D5-8CDB-4F27-A400-15192DED5931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{097908D5-8CDB-4F27-A400-15192DED5931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{097908D5-8CDB-4F27-A400-15192DED5931}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
