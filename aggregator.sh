@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("Day9_execution")
+dirs=("DayXI_select")
 output="result.txt"
 
 # очищаем файл

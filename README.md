@@ -81,3 +81,20 @@ Day 9: Execution
 - Prepared foundation for future query optimization via expression tree merging.
 Result: 
 - Working pipeline-based query engine with basic query operators and execution model.
+
+
+Day 10 - Query Optimization (Where Merge + Expression Rewrite)
+- Implemented QueryOptimizer that merges consecutive Where operations into a single predicate using Expression Tree rewriting.
+- Introduced ExpressionVisitor to correctly replace parameters across merged lambda expressions.
+- Fixed pipeline ordering to preserve correct execution of Where, Skip, and Take.
+Result: 
+- Working query optimizer with correct predicate merging and preserved pipeline order.
+
+
+Day 11: SELECT & Execution Pipeline
+- Extended MiniQueryEngine with SELECT projection support and unified execution pipeline.
+- Introduced object-based pipeline execution and expression compilation for projection logic.
+- Refactored pipeline to support mixed operations (Where, Skip, Take, Select).
+- Improved understanding of execution flow and expression-based transformations.
+Result: 
+- Working query engine with SELECT projection.
