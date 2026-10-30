@@ -104,3 +104,16 @@ Day 12 - Manual AST Building
 - Gained understanding of how LINQ expression trees are structured and evaluated at runtime.
 Result: 
 - practical understanding of Expression Tree internals and ability to manually build and execute lambda expressions.
+
+
+## Review - October 2026
+
+**Key findings:**
+- Reviewed delegates, lambdas, expression trees, Visitor, and lazy query execution.
+- `Query.Execute()` builds a lazy execution pipeline rather than immediately processing data. Consider renaming it to `BuildPipeline()`.
+- Consider adding `ToListResult()` as a terminal operator for materializing query results.
+- The current `Select` implementation uses `IEnumerable<object>`, losing compile-time type safety and limiting further query composition.
+- A future improvement could implement `Select<T, S>` with a transition from `Query<T>` to `Query<S>`, preserving a single logical query and a lazy, type-safe execution pipeline.
+- Remove the unused `PipelineExecutor.Apply()` method from the final implementation.
+
+**Result:** Architecture reviewed. Potential improvements documented; implementation left unchanged.
